@@ -1,0 +1,19 @@
+﻿@model IEnumerable<De1.Models.SanPham>
+
+@foreach (var item in Model)
+{
+    <div class="product-item @item.PhanLoai.MaPhanLoai">
+        <div class="product discount product_filter">
+            <div class="product_image">
+                <img src="~/Content/images/@item.AnhDaiDien" alt="">
+            </div>
+            <div class="favorite favorite_left"></div>
+            <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+            <div class="product_info">
+                <h6 class="product_name"><a href="single.html">@item.TenSanPham</a></h6>
+                <div class="product_price">$@item.DonGiaBanNhoNhat<span>$@item.DonGiaBanLonNhat</span></div>
+            </div>
+        </div>
+        <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+    </div>
+}
